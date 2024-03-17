@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Cloud, DatabaseZap, Github, Link, Linkedin, ShieldCheck, Zap } from "lucide-react";
+import { Cloud, DatabaseZap, Github, Lightbulb, Link, Linkedin, ShieldCheck, Star, Zap } from "lucide-react";
 import Background from "./components/background";
 import CardInput from "./components/card-input";
 import LinkNext from "next/link";
@@ -51,9 +51,30 @@ export default function Home() {
           </div>
 
 
-          <footer className="mt-10 text-center">
-            <p className="text-sm md:text-base">Al compartir el enlace con tus amigos se te otorgarán 10 puntos extras</p>
-            <p className="text-sm md:text-base mt-3 md:mt-0">Desarrollado por <LinkNext href={'https://andrepg.me'} target="_blank" className="underline">andrepg.me</LinkNext></p>
+          <footer className="mt-5 md:mt-10 text-center pb-5 md:pb-0">
+            <p className="text-sm md:text-base">Al compartir el enlace con tus amigos se te otorgarán 10 enlaces</p>
+
+            <div className="text-sm md:text-base mt-3 md:mt-0">
+
+              <div className="flex items-center gap-1 justify-center">
+                <Zap className="fill-orange-500" size={18} strokeWidth={1} /> Desarrollado por
+                <LinkNext href={'https://andrepg.me'} target="_blank" className="underline z-20">
+                  andrepg.me
+                </LinkNext>
+              </div>
+
+              <div className="md:absolute w-full mt-1 gap-1 md:-mt-6 left-0 flex flex-col items-center md:flex-row md:justify-between md:px-24 px-4 z-10">
+                <LinkNext href={""} className="flex items-center gap-2 underline">
+                  <Lightbulb size={18} strokeWidth={1} className="fill-orange-500" />
+                  <span>Sugerir cambios</span>
+                </LinkNext>
+                <LinkNext href={""} className="flex items-center gap-2">
+                  <Star size={18} strokeWidth={1} className="fill-orange-500" />
+                  <span>Estrella en GitHub</span>
+                </LinkNext>
+
+              </div>
+            </div>
           </footer>
         </section>
       </main >
