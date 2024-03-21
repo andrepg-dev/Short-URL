@@ -49,7 +49,7 @@ export default function InputURL() {
   }
 
   return <form className="flex gap-2 mt-3 md:flex-row flex-col" onSubmit={(e) => handleOnSubmit(e)}>
-    <Input placeholder='Pega tu enlace aquí' autoFocus type='url' ref={inputRef} />
+    <Input placeholder='Pega tu enlace aquí' autoFocus type='url' ref={inputRef} defaultValue={'https://'} />
 
     {isLoading ? <Button type="submit" disabled>
       <LoaderIcon className="mr-2 h-4 w-4 animate-spin" /> Generando enlace
