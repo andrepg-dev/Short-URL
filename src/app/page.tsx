@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Cloud, DatabaseZap, Github, Lightbulb, Link, Linkedin, ShieldCheck, Star, Zap } from "lucide-react";
+import LinkNext from "next/link";
 import Background from "./components/background";
 import CardInput from "./components/card-input";
-import LinkNext from "next/link";
+import InputURL from "./components/input";
+import URLIsReady from "./components/url-is-ready";
 
 export default function Home() {
+
   return (
     <>
       <Background />
@@ -15,7 +17,7 @@ export default function Home() {
             <Link size={17} strokeWidth={1} />
           </Button>
 
-          <span className='text-lg md:text-xl font-semibold'>ChortURL</span>
+          <span className='text-lg md:text-xl font-semibold '>ChortURL</span>
         </LinkNext>
 
         <nav className="absolute top-6 right-4 md:top-8 md:right-24 flex gap-4 items-center">
@@ -25,19 +27,18 @@ export default function Home() {
 
         <section className="w-[585px] mt-20">
           <header className="text-center">
-            <h1 className="text-4xl md:text-5xl mb-4 font-medium">Short URL</h1>
-            <p className="text-sm md:text-base mb-4 md:mb-0">Short URL es una herramienta de código abierto para generar enlaces cortos </p>
+            <h1 className="text-4xl md:text-5xl mb-4 font-medium ">Short URL</h1>
+            <p className="text-sm md:text-base mb-4 md:mb-0 ">Short URL es una herramienta de código abierto para generar enlaces cortos </p>
             <p className="text-sm md:text-base">Fácil de compartir, disponible para telefonos, escritorios y tablets </p>
           </header>
 
           <div className='w-full p-4 bg-white mt-14  border flex flex-col gap-3 rounded'>
             <h2 className='font-medium text-xl md:text-2xl text-center'>Pega la URL para ser acortada</h2>
-            <div className="flex gap-2 mt-3 md:flex-row flex-col">
-              <Input placeholder='Pega tu enlace aquí' autoFocus type='url' />
-              <Button>Acortar URL</Button>
-            </div>
+            <InputURL />
 
-            <div className="grid md:grid-cols-2 text-center mt-10 mb-5 gap-12">
+            <URLIsReady />
+
+            <div className="grid md:grid-cols-2 text-center mt-7 md:mt-9 mb-5 gap-12">
               <CardInput Icon={ShieldCheck} text='Seguro y confiable' />
               <CardInput Icon={Cloud} text='Datos en la nube' />
               <CardInput Icon={Zap} text='Redirección veloz' />
@@ -57,7 +58,7 @@ export default function Home() {
             <div className="text-sm md:text-base mt-3 md:mt-0">
 
               <div className="flex items-center gap-1 justify-center">
-                <Zap className="fill-orange-500" size={18} strokeWidth={1} /> Desarrollado por
+                <Zap className="fill-orange-600" size={18} strokeWidth={1} /> Desarrollado por
                 <LinkNext href={'https://andrepg.me'} target="_blank" className="underline z-20">
                   andrepg.me
                 </LinkNext>
@@ -65,11 +66,11 @@ export default function Home() {
 
               <div className="md:absolute w-full mt-1 gap-1 md:-mt-6 left-0 flex flex-col items-center md:flex-row md:justify-between md:px-24 px-4 z-10">
                 <LinkNext href={""} className="flex items-center gap-2 underline">
-                  <Lightbulb size={18} strokeWidth={1} className="fill-orange-500" />
+                  <Lightbulb size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Sugerir cambios</span>
                 </LinkNext>
                 <LinkNext href={""} className="flex items-center gap-2">
-                  <Star size={18} strokeWidth={1} className="fill-orange-500" />
+                  <Star size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Estrella en GitHub</span>
                 </LinkNext>
 

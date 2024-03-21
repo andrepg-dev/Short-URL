@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ShortenedLinkProvider from "./context/shortened-link";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Toaster richColors position="top-center" expand duration={2500}/>
+        <ShortenedLinkProvider>
+          {children}
+        </ShortenedLinkProvider>
+      </body>
     </html>
   );
 }
