@@ -77,7 +77,6 @@ export default function Home() {
                   <Star size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Estrella en GitHub</span>
                 </LinkNext>
-
               </div>
             </div>
           </footer>

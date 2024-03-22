@@ -3,13 +3,6 @@ import shortURLSchema from '@/lib/mongodb/models/shortURL-schema';
 import { connectToDatabase } from "@/lib/mongodb/mongoose";
 import { redirectLinksGenerator } from "@/lib/redirect-generator";
 
-export async function GET() {
-  connectToDatabase();
-
-  const res = await shortURLSchema.find()
-  return Response.json(res);
-}
-
 export async function POST(request: Request) {
   connectToDatabase()
 
