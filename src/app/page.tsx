@@ -69,11 +69,11 @@ export default function Home() {
               </div>
 
               <div className="md:absolute w-full mt-1 gap-1 md:-mt-6 left-0 flex flex-col items-center md:flex-row md:justify-between md:px-24 px-4 z-10">
-                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url/issues/new"} className="flex items-center gap-2 underline">
+                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url/issues/new"} className="flex items-center gap-2 underline" title="Sugerir cambios">
                   <Lightbulb size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Sugerir cambios</span>
                 </LinkNext>
-                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2">
+                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2" title="Sugerir cambios">
                   <Star size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Estrella en GitHub</span>
                 </LinkNext>
