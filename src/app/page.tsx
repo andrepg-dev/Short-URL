@@ -73,7 +73,7 @@ export default function Home() {
                   <Lightbulb size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Sugerir cambios</span>
                 </LinkNext>
-                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2" title="Sugerir cambios">
+                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2" title="Dar estrella en GitHub">
                   <Star size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Estrella en GitHub</span>
                 </LinkNext>
