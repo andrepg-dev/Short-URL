@@ -32,8 +32,6 @@ export default function InputURL() {
       style: { background: "#18181b", color: "#FFF" }
     })
 
-
-
     const { redirect } = await generateLink;
     // After the promise is resolved, we can stop the loading state
     setLoading(false)

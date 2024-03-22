@@ -21,8 +21,12 @@ export default function Home() {
         </LinkNext>
 
         <nav className="absolute top-6 right-4 md:top-8 md:right-24 flex gap-4 items-center">
-          <Github size={29} strokeWidth={1} className='cursor-pointer' />
-          <Linkedin size={29} strokeWidth={1} className='cursor-pointer' />
+          <LinkNext href={'https://github.com/AndrePonce3322/'} target="_blank" title="Github profile">
+            <Github size={29} strokeWidth={1} className='cursor-pointer' />
+          </LinkNext>
+          <LinkNext href={'https://www.linkedin.com/in/andreponceg'} target="_blank" title="Linkedin profile">
+            <Linkedin size={29} strokeWidth={1} className='cursor-pointer' />
+          </LinkNext>
         </nav>
 
         <section className="w-[585px] mt-20">
@@ -65,11 +69,11 @@ export default function Home() {
               </div>
 
               <div className="md:absolute w-full mt-1 gap-1 md:-mt-6 left-0 flex flex-col items-center md:flex-row md:justify-between md:px-24 px-4 z-10">
-                <LinkNext href={""} className="flex items-center gap-2 underline">
+                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url/issues/new"} className="flex items-center gap-2 underline">
                   <Lightbulb size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Sugerir cambios</span>
                 </LinkNext>
-                <LinkNext href={""} className="flex items-center gap-2">
+                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2">
                   <Star size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Estrella en GitHub</span>
                 </LinkNext>
