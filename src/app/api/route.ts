@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
   try {
     body = await request.json();
-    const urlByParams = body.url.trim().toLowerCase();
+    const urlByParams = body.url.trim();
 
     // Create a new URL
     const newUrlShort = new shortURLSchema({
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     let errorName = '';
 
     if (error.code === 11000) {
-      const urlByParams = body.url.trim().toLowerCase();
+      const urlByParams = body.url.trim();
 
       const findURL = await shortURLSchema.findOne({ urlProvider: urlByParams });
       return Response.json(findURL);
