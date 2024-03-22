@@ -32,7 +32,7 @@ export default function InputURL() {
       style: { background: "#18181b", color: "#FFF" }
     })
 
-    
+
 
     const { redirect } = await generateLink;
     // After the promise is resolved, we can stop the loading state
@@ -49,7 +49,7 @@ export default function InputURL() {
   }
 
   return <form className="flex gap-2 mt-3 md:flex-row flex-col" onSubmit={(e) => handleOnSubmit(e)}>
-    <Input placeholder='Pega tu enlace aquí' autoFocus type='url' ref={inputRef} defaultValue={'https://'} />
+    <Input placeholder='Pega tu enlace aquí' autoFocus type='url' ref={inputRef} />
 
     {isLoading ? <Button type="submit" disabled>
       <LoaderIcon className="mr-2 h-4 w-4 animate-spin" /> Generando enlace
