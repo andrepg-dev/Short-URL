@@ -1,11 +1,13 @@
 import { BASE_URL } from "@/constants/BASE_URL";
 import shortURLSchema from "@/lib/mongodb/models/shortURL-schema";
+import { connectToDatabase } from "@/lib/mongodb/mongoose";
 
 interface Params {
   id: string;
 }
 
 export async function GET(request: Request, { params }: { params: Params }) {
+  connectToDatabase()
   let res = null;
 
   if (!params.id) return Response.json({ error: "No se ha encontrado el parámetro id" });
