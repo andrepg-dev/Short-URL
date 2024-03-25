@@ -52,9 +52,8 @@ export default function Home() {
 
           <div className='w-full p-4 bg-white border-b border-l border-r flex flex-col gap-3'>
             Quieres extender tu cuota de enlaces?
-            <LinkNext href='/login' className='underline text-orange-600'>Inicia sesión</LinkNext>
+            <LinkNext href='/' className='underline text-orange-600'>Inicia sesión</LinkNext>
           </div>
-
 
           <footer className="mt-5 md:mt-10 text-center pb-5 md:pb-0">
             <p className="text-sm md:text-base">Al compartir el enlace con tus amigos se te otorgarán 10 enlaces</p>
@@ -73,7 +72,7 @@ export default function Home() {
                   <Lightbulb size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Sugerir cambios</span>
                 </LinkNext>
-                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2" title="Dar estrella en GitHub">
+                <LinkNext target="_blank" href={"https://github.com/AndrePonce3322/short-url"} className="flex items-center gap-2 underline" title="Dar estrella en GitHub">
                   <Star size={18} strokeWidth={1} className="fill-orange-600" />
                   <span>Estrella en GitHub</span>
                 </LinkNext>
