@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "ChortURL - Acortador de enlaces",
-  description: "acortador de enlaces de código abierto creado por @andre para simplificar el compartir en la web. Genera enlaces cortos con un clic, haciendo la gestión de enlaces más rápida y eficiente.",
+  description: "Aplicación creada por @andreponce, simplifica compartir tus enlaces en la web. Genera enlaces cortos con un clic, haciendo la gestión de enlaces más rápida y eficiente.",
   icons: [
     {
       rel: "icon",
